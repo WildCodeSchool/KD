@@ -1,0 +1,57 @@
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marvel Fight</title>
+</head>
+<body>
+    
+
+    
+
+    <script>
+
+        fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
+        .then(resp => {
+            return resp.json()
+        })
+        .then(all => {
+         console.log(all)
+         }),
+
+        fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/70.json')
+        .then(resp => {
+            return resp.json()
+        })
+        .then(batman => {
+         console.log(batman)
+         }),
+
+         fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/450.json')
+        .then(resp => {
+            return resp.json()
+        })
+        .then(michaelangelo => {
+         console.log(michaelangelo)
+         }),
+
+          fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/152.json')
+        .then(resp => {
+            return resp.json()
+        })
+        .then(captaincold => {
+         console.log(captaincold)
+         })
+         fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/499.json')
+        .then(resp => {
+            return resp.json()
+        })
+        .then(offspring => {
+         console.log(offspring)   
+         })
+        
+
+    </script>
+</body>
+</html>

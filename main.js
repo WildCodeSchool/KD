@@ -3,22 +3,21 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
             return resp.json()
         })
         .then(all => {
-            console.log(all[45].images.md)
+           // console.log(all[45].images.md)
             const bane = all[45]
-            console.log(bane)
+           // console.log(bane)
             const randomHero = all[Math.round(Math.random()*all.length)]
-            console.log(randomHero)
-            console.log(randomHero.images.md)
-            const baneImage = all[45].images.md
-            console.log(baneImage)
-        
+            //console.log(randomHero)
+            //console.log(randomHero.images.md)
+           // console.log(baneImage)
             const imageBane = document.getElementById('display')
             imageBane.setAttribute("src",all[45].images.md)
-            console.log(all[45].images.md)
-            
+           // console.log(all[45].images.md)
+           
+            const randomImage = document.getElementById('display_random')
+            randomImage.setAttribute("src",randomHero.images.md)
         })
-
-        
+               
 
             //afficher les images
 

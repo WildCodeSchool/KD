@@ -16,7 +16,23 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
            
             const randomImage = document.getElementById('display_random')
             randomImage.setAttribute("src",randomHero.images.md)
+
+            //dis bonjour
+
+            const sayHello = () => {
+                const output = document.getElementById("output")
+                console.log(output)
+                //document represente le document affiché par le navigateur   
+                }
+
+                output.innerHTML = `Hello I'm ${bane.name}`
+              
+              const button = document.getElementById("button")
+              button.addEventListener('click', sayHello)
         })
+  
+        
+    
                
 
             //afficher les images

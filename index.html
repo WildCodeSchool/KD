@@ -4,56 +4,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Marvel Fight</title>
 </head>
-<body>
-   <!-- <section class="container">
-    <div class="row col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" id="display" alt="Card image cap">
-            <div class="card-body">
-            <h5 class="card-title">Your player</h5>
-            </div>
-            <div id='output'></div>
-            <ul id="display"class="list-group list-group-flush">
-            </ul>
-            <div class="card-body">
-                <button id="button" class="btn btn-dark" type="button">click on me !!!!</button>
-            </div>
-        </div>   
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" id="display_random" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Your opponent</h5>
-        </div>
-            <ul class="list-group list-group-flush">
-        </ul>
-        <div class="card-body">
-        </div>
-     </div>
-    </div>
-    </section> -->
-    <section class="container">
-        <div class="card-group">
+<body>      
+    <h1 class="text-center">MARVEL FIGHT</h1>
+   
+    <section class="container d-flex justify-content-center">
+        <div class="card-group" style="width: 45%;">
             <div class="card">
-                <h5 class="card-title ">Your player</h5>
+                <h5 class="card-title text-center">Your player</h5>
                <img class="card-img-top img-fluid" id="display" alt="Card image cap">
                <div class="card-body">
                     <div id='output'></div>
                     <ul id="displayStats" class="list-group list-group-flush">
                     </ul>
-                    <button id="button" class="btn btn-dark" type="button">Attaque</button>
-               </div>
+                    <button id="button" class="btn btn-dark" type="button">Attaque</button></br>
+                    <button id="button2" class="btn btn-dark" type="button">Défense</button></br>
+                    <button id="buttonBlue" class="btn btn-dark" type="button">Fuite</button>
+                </div>
             </div>
             <div class="mt-5">VS</div>
             <div class="card">
-                <h5 class="card-title">Your opponent</h5>
+                <h5 class="card-title text-center">Your opponent</h5>
                 <img class="card-img-top img-fluid" id="display_random" alt="Card image cap">
                 <div class="card-body">
                     <ul id="display2" class="list-group list-group-flush">
                     </ul>
-                    <button id="button2" class="btn btn-dark" type="button">Défense</button>
-                    <button id="buttonBlue" class="btn btn-dark" type="button">Fuite</button>
                 </div>
             </div>
         </div>

@@ -77,32 +77,34 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
         const combat = (p1, p2) => {
             let tour = 0
             console.log("fight 1")
+            output.innerHTML = ""
             while ((p1.powerstats.combat > 0) && (p2.powerstats.combat > 0)) {
                 const reponse = "attaque/defense"
-                if (reponse === "attaque")
-                p2.powerstats.combat -= p1.powerstats.strength
-                console.log(`il reste ${p2.powerstats.combat} pv a ${p2.name}`)
+                if (reponse === "attaque"){
+                    p2.powerstats.combat -= p1.powerstats.strength
+                    output.innerHTML += `il reste ${p2.powerstats.combat} pv a ${p2.name}<br>`
+                }
                 if (p2.powerstats.combat > 0) {
                     p1.powerstats.combat -= p2.powerstats.strength
-                    console.log(`il reste ${p1.powerstats.combat} pv a ${p1.name}`)
+                    output.innerHTML += `il reste ${p1.powerstats.combat} pv a ${p1.name}<br>`
                 } else if (reponse === "defense") {
                     p1.powerstats.combat -= (p2.powerstats.strength / 2)
-                    console.log(`il reste ${p1.powerstats.combat} pv a ${p1.name}`)
-                    console.log(`${p2.name} attaque !`)
+                    output.innerHTML += `il reste ${p1.powerstats.combat} pv a ${p1.name}<br>`
+                    output.innerHTML += `${p2.name} attaque !<br>`
                     p1.powerstats.combat -= p2.powerstats.strength
-                    console.log(`il reste ${p1.powerstats.combat} pv a ${p1.name}`)
+                    output.innerHTML += `il reste ${p1.powerstats.combat} pv a ${p1.name}<br>`
                 } else {
-                    console.log(`${p1.name} passe son tour !`)
-                    console.log(`${p2.name} attaque !`)
+                    output.innerHTML += `${p1.name} passe son tour !<br>`
+                    output.innerHTML += `${p2.name} attaque !<br>`
                     p1.powerstats.combat -= p2.powerstats.strength
-                    console.log(`il reste ${p1.powerstats.combat} pv a ${p1.name}`)
+                    output.innerHTML += `il reste ${p1.powerstats.combat} pv a ${p1.name}<br>`
                 }
             } 
 
             if (p1.powerstats.combat < 1) {
-                output.innerHTML = `${p1.name} est mort !\n${p2.name} a gagné !\n`
+                output.innerHTML += `${p1.name} est mort !\n${p2.name} a gagné !\n`
             } else {
-                output.innerHTML = `${p2.name} est mort !\n${p1.name} a gagné !\n`
+                output.innerHTML += `${p2.name} est mort !\n${p1.name} a gagné !\n`
             }
         }
         // combat(bane, randomHero)

@@ -21,15 +21,15 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
 
             const sayHello = () => {
                 const output = document.getElementById("output")
-                console.log(output)
-                output.innerHTML = `Vous infligez ${bane.powerstats.strenght} à `
+                //console.log(output)
+                output.innerHTML = `Vous infligez ${bane.powerstats.strenght} à ${randomHero.name}`
                 //document represente le document affiché par le navigateur   
             }
             
-            console.log('display stats')
+            //console.log('display stats')
             //Affichage des stats
             const displayList = document.getElementById('displayStats')
-            console.log(displayStats)
+            //console.log(displayStats)
             displayList.innerHTML = `<li> Health Points : ${bane.powerstats.combat} </li>
                                 <li> Strength : ${bane.powerstats.strength} </li>
                                 <li> Speed : ${bane.powerstats.speed} </li>
@@ -39,8 +39,8 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
             button.addEventListener('click', sayHello)
 
             const fuite = () => {
-                const output = document.getElementById("escape")
-                //console.log(escape)
+                const output3 = document.getElementById("escape")
+                console.log(escape)
                 output.innerHTML = `Vous avez pris la fuite comme un vilain`
             }
 
@@ -56,6 +56,14 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
             htmlList.innerHTML = list
         })
   
+        // Combat
+
+            const combat = (p1, p2) => {
+                console.log("fight 1")
+                randomHero.combat = randomHero.combat - bane.powerstats.strength
+                console.log(randomHero.combat)
+            }
+        
         
     
                

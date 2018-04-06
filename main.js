@@ -22,7 +22,7 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
             const sayHello = () => {
                 const output = document.getElementById("output")
                 //console.log(output)
-                output.innerHTML = `Vous infligez ${bane.powerstats.strenght} à ${randomHero.name}`
+                output.innerHTML = `Vous infligez ${bane.powerstats.strength} à ${randomHero.name}`
                 //document represente le document affiché par le navigateur   
             }
             
@@ -58,7 +58,7 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
         // afficher les stats adverses
 
         const displayListDeux = document.getElementById('display2')
-        console.log('displayStats2')
+        //console.log('displayStats2')
         displayListDeux.innerHTML = `<li> Health Points : ${randomHero.powerstats.combat}</li>
                                     <li> Strength : ${randomHero.powerstats.strenght} </li>
                                     <li> Speed : ${randomHero.powerstats.speed} </li>
@@ -66,14 +66,7 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
 
         // Combat
 
-            const combat = (p1, p2) => {
-                console.log("fight 1")
-                randomHero.combat = randomHero.combat - bane.powerstats.strength
-                console.log(randomHero.combat)
-            }
-        
-        // affichage des stats adverses
-    })      
+           
 
             //afficher les images
 

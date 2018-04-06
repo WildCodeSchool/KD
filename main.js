@@ -69,8 +69,7 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
             output.innerHTML = `Vous etes protégé de 10 points d'armure`
         }
 
-        const buttonDeux = document.getElementById("button2")
-        buttonDeux.addEventListener('click', defense)
+        
 
 
         // Combat
@@ -101,15 +100,20 @@ fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
             } 
 
             if (p1.powerstats.combat < 1) {
-                console.log(`${p1.name} est mort !\n${p2.name} a gagné !\n`)
+                output.innerHTML = `${p1.name} est mort !\n${p2.name} a gagné !\n`
             } else {
-                console.log(`${p2.name} est mort !\n${p1.name} a gagné !\n`)
+                output.innerHTML = `${p2.name} est mort !\n${p1.name} a gagné !\n`
             }
         }
+        // combat(bane, randomHero)
+        const buttonDeux = document.getElementById("button2")
+        buttonDeux.addEventListener('click', () => {
+            combat(bane, randomHero)
+        })
 
-        combat (bane, randomHero)
-    })  
-
+    })
+    
+    
                 /* while ((p1.pv > 0) && (p2.pv > 0)) {
                 if (reponse === "attaque")
                 p2.pv -= p1.attaque
